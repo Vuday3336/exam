@@ -22,9 +22,6 @@ QUESTIONS = [
         "options": ["3", "4", "5", "6"],
         "correct_answer": "4"
     },
-
-    
-    # Add more questions here
     {
         "id": 3,
         "question": "What is the capital of France?",
@@ -85,4 +82,5 @@ def submit_exam():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Modified to allow external access
+    app.run(host='0.0.0.0', port=5000, debug=True)
